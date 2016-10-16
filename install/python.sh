@@ -5,7 +5,6 @@
 # https://www.python.org/downloads/
 
 py_version=2.7.12
-pip_version=2.7
 download_url=https://www.python.org/ftp/python/2.7.12/Python-${py_version}.tar.xz
 
 # download the python version and extract it
