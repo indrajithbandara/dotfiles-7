@@ -86,3 +86,29 @@ swap_sum()
 	# this will grab swap usage and each program using swap and total it.
 	for dir in $(find /proc/ -maxdepth 1 -type d | egrep "^/proc/[0-9]") ; do pid=$(echo $dir | cut -d / -f 3);prog=$(ps -p $pid -o comm --no-headers|awk '{print $1}'); for swap in $(grep Swap $dir/smaps 2>/dev/null| awk '{print $2}');do let sum=$sum+$swap; done; echo "$prog $sum "|grep -vw 0;sum=0;done|awk '{ swap[$1]+=$2; sum+=$2} END { for (prog in swap) printf("%-15s Swap: %10.1f MiB\n", prog, swap[prog]/1024); } END {printf("Total Swap: %20.1f MiB", sum/1024);}'|sort -n -k3
 }
+
+# Extra many types of compressed packages
+# Credit: http://nparikh.org/notes/zshrc.txt
+extract() 
+{
+  	if [ -f "$1" ]; then
+    	  case "$1" in
+      	    *.tar.bz2)  tar -jxvf "$1"                        ;;
+      	    *.tar.gz)   tar -zxvf "$1"                        ;;
+      	    *.bz2)      bunzip2 "$1"                          ;;
+      	    *.dmg)      hdiutil mount "$1"                    ;;
+      	    *.gz)       gunzip "$1"                           ;;
+      	    *.tar)      tar -xvf "$1"                         ;;
+      	    *.tbz2)     tar -jxvf "$1"                        ;;
+      	    *.tgz)      tar -zxvf "$1"                        ;;
+      	    *.zip)      unzip "$1"                            ;;
+      	    *.ZIP)      unzip "$1"                            ;;
+      	    *.pax)      cat "$1" | pax -r                     ;;
+      	    *.pax.Z)    uncompress "$1" --stdout | pax -r     ;;
+      	    *.Z)        uncompress "$1"                       ;;
+      	    *) echo "'$1' cannot be extracted/mounted via extract()" ;;
+    	  esac
+         else
+          echo "'$1' is not a valid file to extract"
+        fi
+}
