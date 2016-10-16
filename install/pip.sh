@@ -1,6 +1,11 @@
 #!/bin/bash
 # this will install common libraries in pip 
 
+
+# get and install pip. comment this out if the version of python you are installing already comes bundled with pip
+wget https://bootstrap.pypa.io/get-pip.py
+python get-pip.py
+
 # adjust the pip version to whatever coincides with the python version installed in python.sh
 # should be a good base of pkgs - https://pythontips.com/2013/07/30/20-python-libraries-you-cant-live-without/ip2 install lxml
 
