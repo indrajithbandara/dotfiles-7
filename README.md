@@ -4,10 +4,11 @@
     git clone git@github.com:booboy/dotfiles.git
 	cd ~/.dotfiles
 
-Source all of the files. Feel free to add to a script or just on cmd line
+The way that I am experimenting with this now as I continue development on it. 
+	useradd -m testuser 
+	sudo su testuser - 
+	cd ~ && git clone https://github.com/booboy/dotfiles.git && cd dotfiles
+	source install.sh
 
-	for DOTFILE in `find $HOME/dotfiles`
-	do
-  		[ -f “$DOTFILE” ] && source “$DOTFILE”
-	done
-
+This should take care of setting up symlinks to .bashrc .bash_aliases .bash_functions .bash_profile and also installing a version of python local to the user for that shel session. 
+I am still working on making the new shells use the local python enviroment. I will have that ready soon. 
