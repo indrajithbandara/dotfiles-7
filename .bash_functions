@@ -54,10 +54,11 @@ fix_spaces()
 sqrt()
 
 {
-	[ $# -ne 1 ] && {
+	[ $# -ne 1 ] && 
+	{
 	  echo 'Usage: sqrt number'
 	  exit 1
-	} || {
+	} ||
    	  echo -e "sqrt($1)\nquit\n" | bc -q -i | head -2 | tail -1
 }
 
