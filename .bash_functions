@@ -90,6 +90,7 @@ swap_sum()
 # Extra many types of compressed packages
 # Credit: http://nparikh.org/notes/zshrc.txt
 extract() 
+
 {
   	if [ -f "$1" ]; then
     	  case "$1" in
@@ -111,4 +112,52 @@ extract()
          else
           echo "'$1' is not a valid file to extract"
         fi
+}
+
+#global_python()
+#{
+#	export PATH=$PATH
+#
+#}
+
+user_python()
+
+{
+	[[ -d "$HOME/install/python" ]] && export PATH="$PATH:/install/python/bin"
+}
+
+add_underscore()
+
+{
+	sed -e s'/ /_/g' #single line to rename from pipe
+}
+
+rot13()
+
+{
+  	if [ -r $1 ]; then cat $1 | tr '[N-ZA-Mn-za-m5-90-4]' '[A-Za-z0-9]'; else echo $* | tr '[N-ZA-Mn-za-m5-90-4]' '[A-Za-z0-9]'; fi
+}
+
+histupdate()    
+
+{
+ 	history -a; history -n
+}
+
+mostusedcmds() 
+
+{
+	history | awk '{ print $2}' | sort | uniq -c | sort -rn | head   
+}
+
+on()
+
+{
+
+	user="$1"
+
+	if who | grep "^$user " > /dev/null; then
+		echo "$user is logged in"
+	fi
+
 }

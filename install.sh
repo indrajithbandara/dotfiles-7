@@ -12,6 +12,9 @@ DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # symlink our dotfiles to our users home dir so they can make use of all the good stuff in it
 ln -sfv "$DOTFILES_DIR/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/.bashrc" ~
+ln -sfv "$DOTFILES_DIR/.bash_aliases" ~
+ln -sfv "$DOTFILES_DIR/.bash_functions" ~
+ln -sfv "$DOTFILES_DIR/.env" ~
 
 # pkg managers
 . "$DOTFILES_DIR/install/pip.sh"
