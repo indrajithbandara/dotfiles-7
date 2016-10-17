@@ -20,4 +20,4 @@ ln -sfv "$DOTFILES_DIR/.env" ~
 . "$DOTFILES_DIR/install/python.sh"
 
 # pkg managers
-. "$DOTFILES_DIR/install/pip.sh"
+. "$DOTFILES_DIR/pip.sh"
