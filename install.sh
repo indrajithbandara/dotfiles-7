@@ -16,5 +16,8 @@ ln -sfv "$DOTFILES_DIR/.bash_aliases" ~
 ln -sfv "$DOTFILES_DIR/.bash_functions" ~
 ln -sfv "$DOTFILES_DIR/.env" ~
 
+# local programming languages
+. "$DOTFILES_DIR/install/python.sh"
+
 # pkg managers
 . "$DOTFILES_DIR/install/pip.sh"
