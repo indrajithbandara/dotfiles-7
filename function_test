@@ -1,0 +1,8 @@
+### list of functions to source ###
+
+randpw() 
+
+{ 
+	openssl rand -base64 12;
+}
+
