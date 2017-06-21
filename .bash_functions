@@ -233,3 +233,21 @@ suptime()
     # compute the time difference
     LANG=C printf '%s (%.2fs ago)\n' "$(date -d @$timestamp)" $(bc <<<"$(date +%s.%N) - $timestamp")
 }
+
+tcp
+ {
+   netstat -nap | egrep "^tcp6{0,1} " | tr "\t" " " \
+     | sed 's/  */ /g;s/ $//g' \
+     | egrep '^tcp6{0,1} [0-9]+ [0-9]+ [0.:]+:[0-9]+ [0.:]+:\* LISTEN ' \
+     | sed 's/^tcp[6 ]*[0-9]* [0-9]* [0.:]*:\([0-9]*\) [0.:]*:\* LISTEN \(.*\)/"\2","tcp",\1/' \
+     | sed 's#^"[0-9]*/#"#' | sort -t"," -k3n | uniq
+ }
+
+udp
+ {
+   netstat -nap | egrep "^udp6{0,1} " | tr "\t" " " \
+     | sed 's/  */ /g;s/ $//g' \
+     | egrep '^udp6{0,1} [0-9]+ [0-9]+ [0.:]+:[0-9]+ [0.:]+:\* ' \
+     | sed 's/^udp[6 ]*[0-9]* [0-9]* [0.:]*:\([0-9]*\) [0.:]*:\* \(.*\)/"\2","udp",\1/' \
+     | sed 's#^"[0-9]*/#"#' | sort -t"," -k3n | uniq
+ }
