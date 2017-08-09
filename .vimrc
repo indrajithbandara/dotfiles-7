@@ -17,9 +17,18 @@ runtime! archlinux.vim
 filetype plugin on
 syntax on
 colorscheme SweetCandy
-set mouse=a
+set mouse=r
 set cursorline
 set number
 set relativenumber
 set background="dark"
+
+" python PEP 8 standards
+set textwidth=79 " lines longer than 79 columns will be broken
+set shiftwidth=4 " operation >> indents 4 columns; << unindents 4 columns
+set tabstop=4 " a hard TAB displays as 4 columns
+set expandtab " insert spaces when hitting TABS
+set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+set shiftround  " round indent to multiple of 'shiftwidth'
+set autoindent " align the new line indent with the previous line
 
