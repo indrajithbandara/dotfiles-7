@@ -14,4 +14,4 @@ ln -sfv "$DOTFILES_DIR/.bash_profile" ~
 ln -sfv "$DOTFILES_DIR/.bashrc" ~
 ln -sfv "$DOTFILES_DIR/.bash_aliases" ~
 ln -sfv "$DOTFILES_DIR/.bash_functions" ~
-ln -sfv "$DOTFILES_DIR/.env" ~
+ln -sfv "$DOTFILES_DIR/.envars" ~

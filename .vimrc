@@ -31,4 +31,3 @@ set expandtab " insert spaces when hitting TABS
 set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set shiftround  " round indent to multiple of 'shiftwidth'
 set autoindent " align the new line indent with the previous line
-
