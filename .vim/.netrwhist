@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/booboy/bin/git_programs/dotfiles/install'
+let g:netrw_dirhist_2='/home/booboy/bin/git/get_weather.py'
+let g:netrw_dirhist_3='/home/booboy/bin/git/get_weather/.git'
+let g:netrw_dirhist_4='/var/www/html/brendan.mcdevitt.tech/_layouts'
