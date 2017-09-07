@@ -15,3 +15,6 @@ ln -sfv "$DOTFILES_DIR/.bashrc" ~
 ln -sfv "$DOTFILES_DIR/.bash_aliases" ~
 ln -sfv "$DOTFILES_DIR/.bash_functions" ~
 ln -sfv "$DOTFILES_DIR/.envars" ~
+
+ln -sfv "$DOTFILES_DIR/.vim" ~
+ln -sfv "$DOTFILES_DIR/.vimrc" ~
