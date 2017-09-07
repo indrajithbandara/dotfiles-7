@@ -41,7 +41,7 @@ set mouse=r
 set cursorline
 set number
 set relativenumber
-set background="dark"
+set background=dark
 
 " python PEP 8 standards
 set textwidth=79 " lines longer than 79 columns will be broken
