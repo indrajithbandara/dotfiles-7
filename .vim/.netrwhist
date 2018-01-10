@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/booboy/bin/git_programs/dotfiles/install'
 let g:netrw_dirhist_2='/home/booboy/bin/git/get_weather.py'
 let g:netrw_dirhist_3='/home/booboy/bin/git/get_weather/.git'
@@ -7,3 +7,5 @@ let g:netrw_dirhist_4='/var/www/html/brendan.mcdevitt.tech/_layouts'
 let g:netrw_dirhist_5='/usr/local/vm/vagrant_scripts/.git'
 let g:netrw_dirhist_6='/etc/firewalld/services'
 let g:netrw_dirhist_7='/home/booboy/bin/mygit/security_python_scripts/.git'
+let g:netrw_dirhist_8='/home/booboy/bin/mygit/cryptobot/.git'
+let g:netrw_dirhist_9='/home/booboy/bin/mygit/misc_pytools/discord_chat_bot'

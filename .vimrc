@@ -52,6 +52,10 @@ set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
 set autoindent " align the new line indent with the previous line
 set fileformat=unix
 
+" markdown preview plugin
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'heavenshell/vim-pydocstring'
+
 set encoding=utf-8
 let g:syntastic_check_on_open = 1
 
